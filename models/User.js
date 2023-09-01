@@ -41,6 +41,9 @@ Allows special characters`,
       type: String,
       required: true,
     },
+     profileImage: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
