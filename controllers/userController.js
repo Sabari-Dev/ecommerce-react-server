@@ -48,13 +48,14 @@ export const deleteUser = (req, res) => {
 //update User
 export const updateUser = async (req, res) => {
   const { id } = req.params;
-  const { name, email, password, gender, dateOfBirth } = req.body;
+  const { name, email, password, gender, dateOfBirth, profileImage } = req.body;
   await User.findByIdAndUpdate(id, {
     name: name,
     email: email,
     password: password,
     gender: gender,
     dateOfBirth: dateOfBirth,
+    profileImage: profileImage,
   })
     .then(
       res
